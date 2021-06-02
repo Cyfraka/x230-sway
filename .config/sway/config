@@ -32,15 +32,16 @@ output * bg /home/cyfraka/Pictures/80s.JPG fill
 
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#output HDMI1 pos 0 0 res 1920x1080
+#output LVDS-1 pos 1920 0 res 1366x768
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
  
 exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 1200 'swaylock -f -c 000000' \
+          timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off

@@ -20,10 +20,12 @@ PS1='[\t \[\e[01;36m\]\u\[\e[0m\]@\[\e[01;36m\]\h\[\e[0m\] \W]\\$ '
 export PATH=${HOME}/tools/vim/bin:$PATH
 export EDITOR=vim
 
-set -o vi
-
 source <(kitty + complete setup bash)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 neofetch
+
+#
+# End
+#
