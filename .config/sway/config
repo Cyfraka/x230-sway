@@ -53,28 +53,13 @@ exec swayidle -w \
    input * {
        dwt enabled
        natural_scroll enabled
-       middle_emulation enabled
-       xkb_layout "us,pl,bg"
+       middle_emulation enaebled
+       xkb_layout "us,bg(phonetic)"
+       xkb_options grp:lalt_lshift_toggle
    }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-# Brightness controls
-bindsym --locked XF86MonBrightnessUp exec brightnessctl s +5%
-bindsym --locked XF86MonBrightnessDown exec brightnessctl s 5%-
 
-# Multimedia
-bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
-bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
-bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
-bindsym --locked XF86AudioMicMute exec --no-startup-id  pactl set-source-mute $(pacmd list-sources |awk '/* index:/{print $3}') toggle 
-#bindsym --locked XF86AudioPlay exec playerctl play-pause
-#bindsym --locked XF86AudioNext exec playerctl next
-#bindsym --locked XF86AudioPrev exec playerctl previous
-
-
-### Key bindings
-#
 # Basics:
 #
     # Start a terminal
