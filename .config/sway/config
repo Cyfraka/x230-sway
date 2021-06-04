@@ -46,7 +46,7 @@ exec swayidle -w \
           before-sleep 'swaylock -f -c 000000'
 
 # Lockscreen
-    bindsym $mod+l 'swaylocl -f -c 000000'
+    bindsym $mod+l exec 'swaylocl -f -c 000000'
 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
