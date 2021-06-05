@@ -20,11 +20,12 @@ set $term kitty
 # Your prefered browser
 set $browser firefox
 
+font pango:Hack 11
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show run
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -46,7 +47,7 @@ exec swayidle -w \
           before-sleep 'swaylock -f -c 000000'
 
 # Lockscreen
-    bindsym $mod+l exec 'swaylocl -f -c 000000'
+    bindsym $mod+l exec swaylocl -c 000000
 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
