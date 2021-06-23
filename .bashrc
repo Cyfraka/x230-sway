@@ -12,7 +12,7 @@
 alias ssh="kitty +kitten ssh"
 alias ls='ls --color=auto'
 alias vnc='ssh -L 5901:127.0.0.1:5901 192.168.6.66'
-alias config='/usr/bin/git --git-dir=$HOME/x230-sway.git --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.x230-sway.git --work-tree=$HOME'
 # reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 PS1='[\t \[\e[01;36m\]\u\[\e[0m\]@\[\e[01;36m\]\h\[\e[0m\] \W]\\$ '
