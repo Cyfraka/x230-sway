@@ -5,8 +5,8 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
-# Logo key. Use Mod1 for Alt.
-set $mod Mod4
+# Logo key. Use Mod1 for Alt or Mod4 for Home.
+set $mod Mod1
 
 # Home row direction keys, like vim
 #set $left h
@@ -22,11 +22,13 @@ set $browser firefox
 
 font pango:Hack 11
 
+# Your prefered polkit
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
 
 ### Output configuration
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
