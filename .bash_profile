@@ -2,8 +2,8 @@
 # ~/.bash_profile
 #
 
-# If running from tty3 start sway
-if [ "$(tty)" = "/dev/tty3" ]; then
+# If running from tty1 start sway
+if [ "$(tty)" = "/dev/tty1" ]; then
 	exec sway
 fi
 
